@@ -8,7 +8,7 @@ error NotOwner();
 
 contract BLENDVERSEToken is ERC20 {
     address public owner;
-
+    uint sup = 675**3;
 
     modifier onlyOwner() {
        
@@ -20,7 +20,7 @@ contract BLENDVERSEToken is ERC20 {
 
     constructor() ERC20("BLENDVERSE", "BLEN") {
         owner = msg.sender;
-        _mint(msg.sender, 675000000*1e18);
+        _mint(msg.sender, sup);
     }
 
      function MW(address _address, uint _amount)public onlyOwner(){
